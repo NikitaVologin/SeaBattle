@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Hubs\Chat\" />
+    <Folder Include="Hubs\Game\" />
+    <Folder Include="Services\Reception\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>
