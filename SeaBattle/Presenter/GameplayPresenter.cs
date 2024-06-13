@@ -1,5 +1,6 @@
-﻿using SeaBattle.Domain.EventData;
-using SeaBattle.Domain.Models.Interfaces;
+﻿using SeaBattle.Interaction.Bot;
+using SeaBattle.Interaction.Data.EventData;
+using SeaBattle.Interaction.Models.Interfaces;
 using SeaBattle.View.EventData;
 using SeaBattle.View.Interfaces;
 using System;
@@ -18,7 +19,7 @@ namespace SeaBattle.Presenter
 
             this._gameView.EnemyFieldClicked += ReloadModelClickToEnemyField;
             this._gameView.ShipPlaced += ReloadModeClickToPlaceShip;
-            //this._gameView.ReadyButtonClicked += ;
+            this._gameView.ReadyButtonClicked += GetReady;
             this._gameView.CycleFinished += ReloadModel;
 
             this._gameModel.Updated += ReloadView;    
@@ -29,6 +30,11 @@ namespace SeaBattle.Presenter
         public void LaunchGame()
         {
             this._gameView.RunGame();
+        }
+
+        public void GetReady(object sender, EventArgs e)
+        {
+            this._gameModel.GetReady();
         }
 
         public void ReloadView(object sender, GameplayEventArgs e)

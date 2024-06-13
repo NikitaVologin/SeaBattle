@@ -1,4 +1,4 @@
-﻿using SeaBattle.Domain.EventData;
+﻿using SeaBattle.Interaction.Data.EventData;
 using SeaBattle.View.EventData;
 using System;
 

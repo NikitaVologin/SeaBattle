@@ -1,9 +1,8 @@
-﻿using Microsoft.Win32.SafeHandles;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using SeaBattle.Domain.EventData;
-using SeaBattle.Domain.Views;
+using SeaBattle.Interaction.Data.EventData;
+using SeaBattle.Interaction.Data.TransportObjects;
 using SeaBattle.View.EventData;
 using SeaBattle.View.Interfaces;
 using System;
@@ -16,8 +15,9 @@ namespace SeaBattle.View
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private CellView[,] _map;
-        private List<ShipView> _ships;
+        private CellInformation[,] _map;
+        private CellInformation[,] _enemyMap;
+        private List<ShipInformation> _ships;
 
         public event EventHandler CycleFinished = delegate { };
         public event EventHandler<PlayerClickArgs> EnemyFieldClicked = delegate { };
@@ -60,6 +60,7 @@ namespace SeaBattle.View
         public void LoadGameCycleParameters(GameplayEventArgs parameters)
         {
             this._map = parameters.Map;
+            this._enemyMap = parameters.EnemyMap;
             this._ships = parameters.Ships;
         }
 

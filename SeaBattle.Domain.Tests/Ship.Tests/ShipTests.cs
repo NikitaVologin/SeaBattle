@@ -1,6 +1,5 @@
 ﻿using SeaBattle.Domain.Entities;
 using SeaBattle.Domain.Exceptions.ShipExceptions;
-using SeaBattle.Domain.VewInterfaces;
 
 namespace SeaBattle.Domain.Tests.ShipTests
 {
@@ -48,7 +47,7 @@ namespace SeaBattle.Domain.Tests.ShipTests
         [Fact]
         public void Ship_CreateShipWithNotCorrectCoordinates()
         {
-            var cells = new List<ICell>
+            var cells = new List<Cell>
             {
                 new Cell(1, 1),
                 new Cell(1, 2),
@@ -61,7 +60,7 @@ namespace SeaBattle.Domain.Tests.ShipTests
         [Fact]
         public void Ship_CreateShipWithNotCorrectCoordinates2()
         {
-            var cells = new List<ICell>
+            var cells = new List<Cell>
             {
                 new Cell(1, 1),
                 new Cell(2, 1),
@@ -74,7 +73,7 @@ namespace SeaBattle.Domain.Tests.ShipTests
         [Fact]
         public void Ship_CreateShipWithNotCorrectSize()
         {
-            var cells = new List<ICell>
+            var cells = new List<Cell>
             {
                 new Cell(1, 1),
                 new Cell(1, 2),
@@ -89,7 +88,7 @@ namespace SeaBattle.Domain.Tests.ShipTests
         [Fact]
         public void Ship_CreateShipWithNotCorrectSize2()
         {
-            var cells = new List<ICell>();
+            var cells = new List<Cell>();
 
             Assert.Throws<NotCorrectShipSizeException>(() => new Ship(cells));
         }
@@ -97,7 +96,7 @@ namespace SeaBattle.Domain.Tests.ShipTests
         [Fact]  
         public void Ship_IsItShipCoordinate()
         {
-            var cells = new List<ICell>
+            var cells = new List<Cell>
             {
                 new Cell(1, 1),
                 new Cell(1, 2),

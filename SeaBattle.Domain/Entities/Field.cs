@@ -38,8 +38,11 @@
             get => this._ships.All(ship => ship.isDestroyed);
         }
 
-        public void SetShipPositions(Ship ship, List<Cell> cells) =>
+        public void SetShipPositions(int shipId, List<Cell> cells)
+        {
+            var ship = Ships.Where(ship => ship.Id == shipId).FirstOrDefault();
             ship.Cells = cells.ToList();
+        }
 
         public bool Attack(Cell cell)
         {

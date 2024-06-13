@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{25AD4271-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6E5495D6-793E-4D5C-A30B-97BC74BBED8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattle.Interaction", "SeaBattle.Interaction\SeaBattle.Interaction.csproj", "{ABA70002-B7F7-467E-9E70-124A8328DBA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{76DD24BF-AA9F-4E32-ABA5-09FAA7251341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76DD24BF-AA9F-4E32-ABA5-09FAA7251341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76DD24BF-AA9F-4E32-ABA5-09FAA7251341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA70002-B7F7-467E-9E70-124A8328DBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA70002-B7F7-467E-9E70-124A8328DBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA70002-B7F7-467E-9E70-124A8328DBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA70002-B7F7-467E-9E70-124A8328DBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{E9DDE9DF-AE12-44F6-92C8-99F42D430921} = {6E5495D6-793E-4D5C-A30B-97BC74BBED8E}
 		{76DD24BF-AA9F-4E32-ABA5-09FAA7251341} = {28D76C56-9C53-4119-BF79-5C9F4FD2FD47}
 		{6E5495D6-793E-4D5C-A30B-97BC74BBED8E} = {28D76C56-9C53-4119-BF79-5C9F4FD2FD47}
+		{ABA70002-B7F7-467E-9E70-124A8328DBA4} = {28D76C56-9C53-4119-BF79-5C9F4FD2FD47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A796D1C-A28F-433F-88F0-BE84E00E280B}

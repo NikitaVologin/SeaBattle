@@ -17,9 +17,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Docs\" />
+    <Folder Include="View\Components\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SeaBattle.Domain\SeaBattle.Domain.csproj" />
+    <ProjectReference Include="..\SeaBattle.Interaction\SeaBattle.Interaction.csproj" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
