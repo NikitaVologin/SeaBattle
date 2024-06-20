@@ -1,5 +1,4 @@
-﻿using SeaBattle.Interaction.Bot;
-using SeaBattle.Interaction.Data.EventData;
+﻿using SeaBattle.Interaction.Data.EventData;
 using SeaBattle.Interaction.Models.Interfaces;
 using SeaBattle.View.EventData;
 using SeaBattle.View.Interfaces;

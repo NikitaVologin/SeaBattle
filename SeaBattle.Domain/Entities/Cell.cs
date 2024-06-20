@@ -23,6 +23,7 @@ namespace SeaBattle.Domain.Entities
         private int _y;
         private bool _isEmpty = false;
         private bool _isAttacked = false;
+        private bool _isShipCell = false;
 
         public int X 
         { 
@@ -60,6 +61,20 @@ namespace SeaBattle.Domain.Entities
                 if (_isEmpty)
                     throw new InvalidOperationException("You can not set {IsAttracked} to empty cell!");
                 this._isAttacked = value;
+            }
+        }
+
+        public bool IsShipCell
+        {
+            get
+            {
+                if (_isEmpty)
+                    return false;
+                return this._isShipCell;
+            }
+            set
+            {
+                this._isShipCell = value;
             }
         }
 

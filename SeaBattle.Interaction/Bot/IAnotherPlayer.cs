@@ -1,18 +1,22 @@
-﻿using SeaBattle.Domain.Entities;
-using SeaBattle.Interaction.Data.EventData;
-using SeaBattle.Interaction.Data.TransportObjects;
+﻿using SeaBattle.Interaction.Data.EventData;
 
 namespace SeaBattle.Interaction.Bot
 {
     public interface IAnotherPlayer
     {
         event EventHandler<MoveEventArgs> MoveSwitched;
-        event EventHandler<GameStartEventArgs> GameStarted;
+        event EventHandler<MoveResultEventArgs> MoveAccepted;
+        event EventHandler IsReadyForGame;
+        event EventHandler GameIsLoosed;
 
-        void Attack(Field field);
+        void Attack();
 
-        void Attacked(Cell cell);
+        void Attacked(Tuple<int, int> point);
 
-        void GetShips();
+        void AcceptMove(Tuple<int, int> point, bool isShipCell, bool isShipDestroyed);
+
+        void AcceptMessageGameIsEnd();
+
+        void AcceptAnotherPlayerMessageReadyForGame();
     }
 }

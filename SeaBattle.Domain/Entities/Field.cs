@@ -50,6 +50,11 @@
             return this.Ships.Any(x => x.IsItShipCoordinate(cell));
         }
 
+        public bool IsShipDestroyedByCell(Cell cell)
+        {
+            return this.Ships.First(x => x.IsItShipCoordinate(cell)).isDestroyed;
+        }
+
         private bool cellInMapBounds(int x, int y)
         {
             return x >= this.getMinX() && x <= this.getMaxX() &&
